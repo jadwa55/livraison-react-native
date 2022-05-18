@@ -10,24 +10,14 @@ import {
   TouchableOpacity,
 } from "react-native";
  
-export default function Login({navigation}) {
-  const [name, setName] = useState("");
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [number, setNumber] = useState("");
  
   return (
     <View style={styles.container}>
  <Image style={styles.image} source={require("../assets/pngwing.png")} />
       <StatusBar style="auto" />
-      <View style={styles.inputView}>
-        <TextInput
-          style={styles.TextInput}
-          placeholder="Enter Your Name"
-          placeholderTextColor="#003f5c"
-          onChangeText={(name) => setName(name)}
-        />
-      </View>
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
@@ -46,24 +36,12 @@ export default function Login({navigation}) {
           onChangeText={(password) => setPassword(password)}
         />
       </View>
-      <View style={styles.inputView}>
-        <TextInput
-          style={styles.TextInput}
-          placeholder="Enter Your Number"
-          placeholderTextColor="#003f5c"
-          secureTextEntry={true}
-          onChangeText={(password) => setNumber(password)}
-        />
-      </View>
+ 
       <TouchableOpacity>
-        <a><Text style={styles.forgot_button}>Register Now!</Text></a>
+        <Text style={styles.forgot_button}>Forgot Password ?</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
-        Or
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.loginBtn} onPress={()=>{
-        navigation.navigate('Login')
-      }}>
+ 
+      <TouchableOpacity style={styles.loginBtn}>
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
     </View>
@@ -75,13 +53,13 @@ const styles = StyleSheet.create({
     flex: 1,
     // backgroundColor: "black",
     alignItems: "center",
-    // justifyContent: "center",
+    justifyContent: "center",
   },
  
   image: {
     marginBottom: 40,
-    width:"50%",
-    height:"30%"
+    width:"30%",
+    height:"20%"
   },
  
   inputView: {
@@ -89,7 +67,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     width: "70%",
     height: 45,
-    marginBottom: 10,
+    marginBottom: 20,
   },
  
   TextInput: {
@@ -101,7 +79,7 @@ const styles = StyleSheet.create({
  
   forgot_button: {
     height: 30,
-    // marginBottom: 10,
+    marginBottom: 30,
     color:'black'
   },
  
@@ -111,7 +89,7 @@ const styles = StyleSheet.create({
     height: 50,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 10,
+    marginTop: 40,
     backgroundColor: "#FF9900",
   },
 });
