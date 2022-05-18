@@ -18,23 +18,23 @@ export default function HomeScreen({ navigation }) {
           <View  style={styles.Buttons}>
               <TouchableOpacity style={styles.loginBtn}
           onPress={() => navigation.navigate('Login')}>
-          <Text style={styles.loginText}>SignIn</Text>
+          <Text style={styles.loginText}>Login</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.loginBtn}
           onPress={() => navigation.navigate('Register')}>
-          <Text style={styles.loginText}>SignUp</Text>
+          <Text style={styles.loginText}>Register</Text>
           </TouchableOpacity>
           </View>
-          <Image style={styles.image} source={require("../assets/logo.jpg")} />
-        <View><Text style={styles.title}>𝓜𝓐𝓡𝓗𝓐𝓑𝓐</Text></View> 
-        <View><Text style={styles.text}>𝔇𝔬𝔲𝔟𝔩𝔢 𝓬𝓵𝓲𝓬𝓴𝓼 𝔂𝓸𝓾𝓻 𝓭𝓲𝓼𝓱𝓮𝓼 𝓭𝓮𝓵𝓲𝓿𝓮𝓻𝓮𝓭 𝓽𝓸 𝔂𝓸𝓾𝓻 𝓱𝓸𝓶𝓮</Text></View>
+          <Image style={styles.image} source={require("../assets/pngwing.png")} />
+        <View><Text style={styles.title}>Restaurant marhaba</Text></View> 
+        <View><Text style={styles.text}>ماكلتك تجيك حتى الدار</Text></View>
         <View>
         <TouchableOpacity style={styles.orderBtn} onPress={() => navigation.navigate('Cards')}>
-        <Text style={styles.orderText}>Order Now</Text>
+        <Text style={styles.orderText}>كومندي دابااا</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.hoveredBtn} onPress={() => navigation.navigate('Profile')}>
+      {/* <TouchableOpacity style={styles.hoveredBtn} onPress={() => navigation.navigate('Profile')}>
       <FontAwesomeIcon icon={ faUser } style={ styles.icon } />
-      </TouchableOpacity>
+      </TouchableOpacity> */}
       </View>
       </View>
     );
@@ -42,10 +42,10 @@ export default function HomeScreen({ navigation }) {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: "black",
+    //   backgroundColor: "black",
     },
     title: {
-    color:'#FF8000',
+    color:'#EFD345',
     fontSize: 30,
     alignSelf:'center',
     marginBottom:10
@@ -60,15 +60,15 @@ export default function HomeScreen({ navigation }) {
     loginBtn: {
         width: "50%",
         borderRadius: 15,
-        height: 50,
+        height: 30,
         alignItems: "center",
         justifyContent: "center",
         marginBottom: 40,
-        backgroundColor: "#FFF",
+        backgroundColor: "#FFEF82",
         marginLeft:8,
       },
       text: {
-        color:'#FFF',
+        color:'black',
         fontSize: 20,
         alignSelf:'center',
         marginBottom:40
@@ -86,7 +86,7 @@ export default function HomeScreen({ navigation }) {
             alignItems: "center",
             justifyContent: "center",
             marginBottom: 40,
-            backgroundColor: "#FF8000",
+            backgroundColor: "#EFD345",
             marginLeft:8,
             alignSelf:'center'
           },
@@ -99,7 +99,7 @@ export default function HomeScreen({ navigation }) {
               color:'black'
           },
           icon:{
-            backgroundColor:'#ff8000',
+            backgroundColor:'#EFD345',
             width:200
           },
           hoveredBtn: {
@@ -109,7 +109,7 @@ export default function HomeScreen({ navigation }) {
             height: 50,
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "#FF8000",
+            backgroundColor: "#EFD345",
             right:10,
             buttom:1,
             marginTop:50

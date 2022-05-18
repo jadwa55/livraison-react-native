@@ -90,6 +90,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 40,
-    backgroundColor: "#FF9900",
+    backgroundColor: "#EFD345",
   },
 });
