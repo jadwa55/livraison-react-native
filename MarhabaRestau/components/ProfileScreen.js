@@ -22,6 +22,10 @@ export default function ProfileScreen({ navigation }) {
         <View>
         <TouchableOpacity style={styles.orderBtn} onPress={() => navigation.navigate('Home')}>
         <Text style={styles.orderText}>Page Principale</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.hoveredBtn} onPress={() => navigation.navigate('Profile')}>
+        <Text style={styles.options}onPress={() => navigation.navigate('Dashboard')}>Dashboard</Text> 
+        {/* <FontAwesomeIcon icon={ faDashboard } style={ styles.icon } /> */}
       </TouchableOpacity>
       
       </View>
