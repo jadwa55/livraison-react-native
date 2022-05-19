@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Pressable
 } from "react-native";
-import { faCoffee, faUser, faCircle, faCheck, faDashboard } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, faUser, faCircle, faCheck, faHome } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 
 
@@ -25,7 +25,7 @@ export default function ProfileScreen({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity style={styles.hoveredBtn} onPress={() => navigation.navigate('Profile')}>
         <Text style={styles.options}onPress={() => navigation.navigate('Dashboard')}>Dashboard</Text> 
-        <FontAwesomeIcon icon={ faDashboard } style={ styles.icon } />
+        <FontAwesomeIcon icon={ faHome } style={ styles.icon } />
       </TouchableOpacity>
       
       </View>
@@ -108,4 +108,8 @@ export default function ProfileScreen({ navigation }) {
             buttom:1,
             marginTop:50
           },
+          options:{
+            fontSize:10,
+            fontWeight:'bold', 
+          }
 })

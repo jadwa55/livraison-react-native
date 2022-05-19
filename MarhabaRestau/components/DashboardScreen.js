@@ -9,21 +9,18 @@ import {
   TouchableOpacity,
   FlatList
 } from "react-native";
-import { faBell, faBars } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { DataTable } from 'react-native-paper';
-// import OrderItem from './orderItem'
+// import OrderItem from './orderItem';
 
 export default function DashboardScreen({ navigation }){
     return (
         <ScrollView>
         <View style={styles.container}>
             <View  style={styles.Buttons}>
-            {/* <TouchableOpacity style={styles.burgermenu}>
-                <FontAwesomeIcon icon={ faBars } style={ styles.icon }/>
-            </TouchableOpacity> */}
-            <TouchableOpacity style={styles.hoveredBtn}>
-                <FontAwesomeIcon icon={ faBell } style={ styles.icon } />
+            <TouchableOpacity style={styles.hoveredBtn}onPress={() => navigation.navigate('Profile')}>
+                <FontAwesomeIcon icon={ faUser } style={ styles.icon } />
             </TouchableOpacity>
             </View>
             <Text style={styles.title}>Commandes</Text>
@@ -31,16 +28,31 @@ export default function DashboardScreen({ navigation }){
         <View>
             <DataTable>
                 <DataTable.Header>
-                <DataTable.Title>Status</DataTable.Title>
-                <DataTable.Title>Adresse</DataTable.Title>
-                <DataTable.Title numeric>Telephone</DataTable.Title>
-                <DataTable.Title numeric>Name</DataTable.Title>
+                    <DataTable.Title>Status</DataTable.Title>
+                    <DataTable.Title>Adresse</DataTable.Title>
+                    <DataTable.Title>Telephone</DataTable.Title>
+                    <DataTable.Title>Name</DataTable.Title>
                 </DataTable.Header>
+                <DataTable.Row>
+                    <DataTable.Cell>1</DataTable.Cell>
+                    <DataTable.Cell>Rabat</DataTable.Cell>
+                    <DataTable.Cell>132423349</DataTable.Cell>
+                    <DataTable.Cell>Salma</DataTable.Cell>
+                </DataTable.Row>
+                <DataTable.Row>
+                    <DataTable.Cell>0</DataTable.Cell>
+                    <DataTable.Cell>Casablanca</DataTable.Cell>
+                    <DataTable.Cell>23569386</DataTable.Cell>
+                    <DataTable.Cell>Sawsan</DataTable.Cell>
+                </DataTable.Row>
+                <DataTable.Row>
+                    <DataTable.Cell>0</DataTable.Cell>
+                    <DataTable.Cell>Casa</DataTable.Cell>
+                    <DataTable.Cell>23569386</DataTable.Cell>
+                    <DataTable.Cell>Sanaa</DataTable.Cell>
+                </DataTable.Row>
             </DataTable>
         </View>
-            {/* {orders.map(order =>(<View style={styles.table}><OrderItem order= {order}/>
-        </View>
-        ))} */}
         </ScrollView>
     );
   }

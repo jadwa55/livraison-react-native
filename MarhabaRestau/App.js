@@ -9,6 +9,7 @@ import HomeScreen from './components/HomeScreen';
 import CardsScreen from './components/CardScreen';
 import ProfileScreen from './components/ProfileScreen';
 import DashboardScreen from './components/DashboardScreen';
+// import OrderItem from './components/orderItem';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,7 @@ function App() {
         <Stack.Screen name="Cards" component={CardsScreen} />
         <Stack.Screen name="Profile" component={ProfileScreen}/>
         <Stack.Screen name="Dashboard" component={DashboardScreen}/>
+        {/* <Stack.Screen name="Order" component={OrderItem}/> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
