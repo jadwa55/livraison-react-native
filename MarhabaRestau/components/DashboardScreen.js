@@ -9,44 +9,45 @@ import {
   TouchableOpacity,
   FlatList
 } from "react-native";
-import axios from "axios";
-import { faHand, faBell, faBars, faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faBell, faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { DataTable } from 'react-native-paper';
-import OrderItem from './orderItem'
+// import OrderItem from './orderItem'
 
 export default function DashboardScreen({ navigation }){
     return (
         <ScrollView>
         <View style={styles.container}>
             <View  style={styles.Buttons}>
-            <TouchableOpacity style={styles.burgermenu}>
+            {/* <TouchableOpacity style={styles.burgermenu}>
                 <FontAwesomeIcon icon={ faBars } style={ styles.icon }/>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             <TouchableOpacity style={styles.hoveredBtn}>
                 <FontAwesomeIcon icon={ faBell } style={ styles.icon } />
             </TouchableOpacity>
             </View>
-            <Text style={styles.title}>Orders</Text>
+            <Text style={styles.title}>Commandes</Text>
         </View>
         <View>
             <DataTable>
                 <DataTable.Header>
                 <DataTable.Title>Status</DataTable.Title>
                 <DataTable.Title>Adresse</DataTable.Title>
-                <DataTable.Title numeric>Management</DataTable.Title>
+                <DataTable.Title numeric>Telephone</DataTable.Title>
+                <DataTable.Title numeric>Name</DataTable.Title>
                 </DataTable.Header>
-            </DataTable></View>
-            {orders.map(order =>(<View style={styles.table}><OrderItem order= {order}/>
+            </DataTable>
         </View>
-        ))}
+            {/* {orders.map(order =>(<View style={styles.table}><OrderItem order= {order}/>
+        </View>
+        ))} */}
         </ScrollView>
     );
   }
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: "black",
+      backgroundColor: '#FFEF82',
     },
     Buttons:{
 
@@ -57,7 +58,7 @@ export default function DashboardScreen({ navigation }){
     },
     icon:{
     backgroundColor:'#EFD345',
-    width:200
+    width:20
     },
     hoveredBtn: {
         width: "15%",
@@ -90,10 +91,10 @@ export default function DashboardScreen({ navigation }){
             height: 44,
           },
           title: {
-            color:'#EFD345',
+            color:'black',
             fontSize: 30,
             alignSelf:'center',
-            marginTop:100
+            marginTop:20
             },
             table: {
                 paddingTop: 10,
