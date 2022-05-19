@@ -100,7 +100,7 @@ export default function HomeScreen({ navigation }) {
           },
           icon:{
             backgroundColor:'#EFD345',
-            width:200
+            width:20
           },
           hoveredBtn: {
             position:'absolute',
