@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import {
   StyleSheet,
@@ -12,29 +11,19 @@ import { faCoffee, faUser, faCircle, faCheck } from '@fortawesome/free-solid-svg
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 
 
-export default function HomeScreen({ navigation }) {
+
+
+export default function ProfileScreen({ navigation }) {
     return (
       <View style={styles.container}>
-          <View  style={styles.Buttons}>
-              <TouchableOpacity style={styles.loginBtn}
-          onPress={() => navigation.navigate('Login')}>
-          <Text style={styles.loginText}>Login</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.loginBtn}
-          onPress={() => navigation.navigate('Register')}>
-          <Text style={styles.loginText}>Register</Text>
-          </TouchableOpacity>
-          </View>
-          <Image style={styles.image} source={require("../assets/pngwing.png")} />
-        <View><Text style={styles.title}>Restaurant marhaba</Text></View> 
-        <View><Text style={styles.text}>ماكلتك تجيك حتى الدار</Text></View>
+          <Image style={styles.image} source={require("../assets/prof.png")} />
+        <View><Text style={styles.title}>Salma DAIOUF </Text></View> 
+        <View><Text style={styles.text}>chi tkharbi9aaaaa</Text></View>
         <View>
-        <TouchableOpacity style={styles.orderBtn} onPress={() => navigation.navigate('Cards')}>
-        <Text style={styles.orderText}>كومندي دابااا</Text>
+        <TouchableOpacity style={styles.orderBtn} onPress={() => navigation.navigate('Home')}>
+        <Text style={styles.orderText}>Page Principale</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.hoveredBtn} onPress={() => navigation.navigate('Profile')}>
-      <FontAwesomeIcon icon={ faUser } style={ styles.icon } />
-      </TouchableOpacity>
+      
       </View>
       </View>
     );
@@ -78,9 +67,10 @@ export default function HomeScreen({ navigation }) {
             width:"50%",
             height:"40%",
             alignSelf:'center',
+            borderRadius:'100%'
           },
           orderBtn: {
-            width: "50%",
+            width: "30%",
             borderRadius: 20,
             height: 50,
             alignItems: "center",
@@ -91,7 +81,7 @@ export default function HomeScreen({ navigation }) {
             alignSelf:'center'
           },
           orderText: {
-            fontSize:20,
+            fontSize:15,
             fontWeight:'bold' , 
           },
           loginText:{
